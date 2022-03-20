@@ -1,21 +1,71 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
-	<channel>
-		<title>James T. Maher's Blog</title>
-		<link>http://jtmaher2.github.io/blog/</link>
-		<description />
-		<copyright>2022</copyright>
-		<pubDate>Sun, 20 Mar 2022 02:58:45 GMT</pubDate>
-		<lastBuildDate>Sun, 20 Mar 2022 02:58:45 GMT</lastBuildDate>
-		<item>
-			<title>2016 05 26 Twisted Triangle</title>
-			<link>https://jtmaher2.github.io/blog/2022/03/2016-05-26-twisted-triangle</link>
-			<description>&lt;p&gt;For the &lt;a href="https://class.coursera.org/webgl-001"&gt;Interactive Graphics with WebGL&lt;/a&gt; course on Coursera, I
-am making a tessellated triangle that can be twisted by a certain amount. This
-project, which is a work in progress, can be viewed here:&lt;/p&gt;</description>
-			<guid>https://jtmaher2.github.io/blog/2022/03/2016-05-26-twisted-triangle</guid>
-			<pubDate>Sun, 06 Mar 2022 20:15:29 GMT</pubDate>
-			<content:encoded>&lt;script id="vertex-shader" type="x-shader/x-vertex"&gt;
+<!DOCTYPE html>
+    <head>
+        <base href="/" />
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2016 05 26 Twisted Triangle</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+<link href="assets/css/style.css" rel="stylesheet" />
+<link href="assets/font/css/open-iconic-bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/vs2015.css">
+<script src="assets/js/jquery.slim.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/highlight.min.js"></script>
+<link type="application/rss+xml" rel="alternate" title="James T. Maher&#x27;s Blog" href=/blog/rss/index.rss />
+
+        
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="2016 05 26 Twisted Triangle">
+
+    </head>
+    <body class="main">
+        <div class="top-row px-4">
+    <h1 class="site-title"><a href="/" class="text-reset text-decoration-none">James T. Maher&#x27;s Website</a></h1>
+    <div class="links">
+        <a href="/blog/">Blog</a>
+        <a href="/blog/about.html">About</a>
+        <a href="/blog/archive.html">Archive</a>
+    </div>
+</div>
+        <div id="site_container" class="container-fluid flex-fill">
+            <div class="row">
+                <main id="page_container" role="main" class="col">
+                    <section class="body-section">
+                        <div class="body-container">
+                            <div class="row">
+                                <div class="col-12 col-lg-9">
+                                        <section class="page-section">
+        <div class="row">
+            <div class="col-12">
+                <article class="post">
+                    <header>
+                        <h2 itemprop="headline name" class="text-primary">2016 05 26 Twisted Triangle</h2>
+                        <div class="bh">
+                            <time datetime="3/6/2022 8:15 PM" itemprop="datePublished">March 06, 2022</time>
+                                <a href="/blog/categories/news"><span class="badge badge-light">News</span></a>
+                        </div>
+                    </header>
+                    <hr />
+                    <div itemprop="articleBody">
+                        <script id="vertex-shader" type="x-shader/x-vertex">
 attribute vec4 vPosition;
 
 void
@@ -23,9 +73,9 @@ main()
 {
     gl_Position = vPosition;
 }
-&lt;/script&gt;
+</script>
 
-&lt;script id="fragment-shader" type="x-shader/x-fragment"&gt;
+<script id="fragment-shader" type="x-shader/x-fragment">
 precision mediump float;
 
 void
@@ -33,9 +83,9 @@ main()
 {
     gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );
 }
-&lt;/script&gt;
+</script>
 
-&lt;script&gt;
+<script>
 var canvas;
 var gl;
 var points = [];
@@ -136,8 +186,8 @@ function render() {
     gl.clear(gl.COLOR_BUFFER_BIT);
     gl.drawArrays(gl.TRIANGLES, 0, points.length);
 }
-&lt;/script&gt;
-&lt;script&gt;
+</script>
+<script>
 //
 //  initShaders.js
 //
@@ -157,7 +207,7 @@ function initShaders(gl, vertexShaderId, fragmentShaderId) {
         gl.compileShader(vertShdr);
         if (!gl.getShaderParameter(vertShdr, gl.COMPILE_STATUS)) {
             var msg = "Vertex shader failed to compile.  The error log is:"
-                + "&lt;pre&gt;" + gl.getShaderInfoLog(vertShdr) + "&lt;/pre&gt;";
+                + "<pre>" + gl.getShaderInfoLog(vertShdr) + "</pre>";
             alert(msg);
             return -1;
         }
@@ -174,7 +224,7 @@ function initShaders(gl, vertexShaderId, fragmentShaderId) {
         gl.compileShader(fragShdr);
         if (!gl.getShaderParameter(fragShdr, gl.COMPILE_STATUS)) {
             var msg = "Fragment shader failed to compile.  The error log is:"
-                + "&lt;pre&gt;" + gl.getShaderInfoLog(fragShdr) + "&lt;/pre&gt;";
+                + "<pre>" + gl.getShaderInfoLog(fragShdr) + "</pre>";
             alert(msg);
             return -1;
         }
@@ -187,15 +237,15 @@ function initShaders(gl, vertexShaderId, fragmentShaderId) {
 
     if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
         var msg = "Shader program failed to link.  The error log is:"
-            + "&lt;pre&gt;" + gl.getProgramInfoLog(program) + "&lt;/pre&gt;";
+            + "<pre>" + gl.getProgramInfoLog(program) + "</pre>";
         alert(msg);
         return -1;
     }
 
     return program;
 }
-&lt;/script&gt;
-&lt;script&gt;
+</script>
+<script>
 //////////////////////////////////////////////////////////////////////////////
 //
 //  Angel.js
@@ -356,19 +406,19 @@ function mat4() {
 function equal(u, v) {
     if (u.length != v.length) { return false; }
 
-    if (u.matrix &amp;&amp; v.matrix) {
-        for (var i = 0; i &lt; u.length; ++i) {
+    if (u.matrix && v.matrix) {
+        for (var i = 0; i < u.length; ++i) {
             if (u[i].length != v[i].length) { return false; }
-            for (var j = 0; j &lt; u[i].length; ++j) {
+            for (var j = 0; j < u[i].length; ++j) {
                 if (u[i][j] !== v[i][j]) { return false; }
             }
         }
     }
-    else if (u.matrix &amp;&amp; !v.matrix || !u.matrix &amp;&amp; v.matrix) {
+    else if (u.matrix && !v.matrix || !u.matrix && v.matrix) {
         return false;
     }
     else {
-        for (var i = 0; i &lt; u.length; ++i) {
+        for (var i = 0; i < u.length; ++i) {
             if (u[i] !== v[i]) { return false; }
         }
     }
@@ -381,17 +431,17 @@ function equal(u, v) {
 function add(u, v) {
     var result = [];
 
-    if (u.matrix &amp;&amp; v.matrix) {
+    if (u.matrix && v.matrix) {
         if (u.length != v.length) {
             throw "add(): trying to add matrices of different dimensions";
         }
 
-        for (var i = 0; i &lt; u.length; ++i) {
+        for (var i = 0; i < u.length; ++i) {
             if (u[i].length != v[i].length) {
                 throw "add(): trying to add matrices of different dimensions";
             }
             result.push([]);
-            for (var j = 0; j &lt; u[i].length; ++j) {
+            for (var j = 0; j < u[i].length; ++j) {
                 result[i].push(u[i][j] + v[i][j]);
             }
         }
@@ -400,7 +450,7 @@ function add(u, v) {
 
         return result;
     }
-    else if (u.matrix &amp;&amp; !v.matrix || !u.matrix &amp;&amp; v.matrix) {
+    else if (u.matrix && !v.matrix || !u.matrix && v.matrix) {
         throw "add(): trying to add matrix and non-matrix variables";
     }
     else {
@@ -408,7 +458,7 @@ function add(u, v) {
             throw "add(): vectors are not the same dimension";
         }
 
-        for (var i = 0; i &lt; u.length; ++i) {
+        for (var i = 0; i < u.length; ++i) {
             result.push(u[i] + v[i]);
         }
 
@@ -421,19 +471,19 @@ function add(u, v) {
 function subtract(u, v) {
     var result = [];
 
-    if (u.matrix &amp;&amp; v.matrix) {
+    if (u.matrix && v.matrix) {
         if (u.length != v.length) {
             throw "subtract(): trying to subtract matrices" +
             " of different dimensions";
         }
 
-        for (var i = 0; i &lt; u.length; ++i) {
+        for (var i = 0; i < u.length; ++i) {
             if (u[i].length != v[i].length) {
                 throw "subtract(): trying to subtact matrices" +
                 " of different dimensions";
             }
             result.push([]);
-            for (var j = 0; j &lt; u[i].length; ++j) {
+            for (var j = 0; j < u[i].length; ++j) {
                 result[i].push(u[i][j] - v[i][j]);
             }
         }
@@ -442,7 +492,7 @@ function subtract(u, v) {
 
         return result;
     }
-    else if (u.matrix &amp;&amp; !v.matrix || !u.matrix &amp;&amp; v.matrix) {
+    else if (u.matrix && !v.matrix || !u.matrix && v.matrix) {
         throw "subtact(): trying to subtact  matrix and non-matrix variables";
     }
     else {
@@ -450,7 +500,7 @@ function subtract(u, v) {
             throw "subtract(): vectors are not the same length";
         }
 
-        for (var i = 0; i &lt; u.length; ++i) {
+        for (var i = 0; i < u.length; ++i) {
             result.push(u[i] - v[i]);
         }
 
@@ -463,23 +513,23 @@ function subtract(u, v) {
 function mult(u, v) {
     var result = [];
 
-    if (u.matrix &amp;&amp; v.matrix) {
+    if (u.matrix && v.matrix) {
         if (u.length != v.length) {
             throw "mult(): trying to add matrices of different dimensions";
         }
 
-        for (var i = 0; i &lt; u.length; ++i) {
+        for (var i = 0; i < u.length; ++i) {
             if (u[i].length != v[i].length) {
                 throw "mult(): trying to add matrices of different dimensions";
             }
         }
 
-        for (var i = 0; i &lt; u.length; ++i) {
+        for (var i = 0; i < u.length; ++i) {
             result.push([]);
 
-            for (var j = 0; j &lt; v.length; ++j) {
+            for (var j = 0; j < v.length; ++j) {
                 var sum = 0.0;
-                for (var k = 0; k &lt; u.length; ++k) {
+                for (var k = 0; k < u.length; ++k) {
                     sum += u[i][k] * v[k][j];
                 }
                 result[i].push(sum);
@@ -495,7 +545,7 @@ function mult(u, v) {
             throw "mult(): vectors are not the same dimension";
         }
 
-        for (var i = 0; i &lt; u.length; ++i) {
+        for (var i = 0; i < u.length; ++i) {
             result.push(u[i] * v[i]);
         }
 
@@ -509,7 +559,7 @@ function mult(u, v) {
 //
 
 function translate(x, y, z) {
-    if (Array.isArray(x) &amp;&amp; x.length == 3) {
+    if (Array.isArray(x) && x.length == 3) {
         z = x[2];
         y = x[1];
         x = x[0];
@@ -553,7 +603,7 @@ function rotate(angle, axis) {
 //----------------------------------------------------------------------------
 
 function scale(x, y, z) {
-    if (Array.isArray(x) &amp;&amp; x.length == 3) {
+    if (Array.isArray(x) && x.length == 3) {
         z = x[2];
         y = x[1];
         x = x[0];
@@ -658,9 +708,9 @@ function transpose(m) {
     }
 
     var result = [];
-    for (var i = 0; i &lt; m.length; ++i) {
+    for (var i = 0; i < m.length; ++i) {
         result.push([]);
-        for (var j = 0; j &lt; m[i].length; ++j) {
+        for (var j = 0; j < m[i].length; ++j) {
             result[i].push(m[j][i]);
         }
     }
@@ -681,7 +731,7 @@ function dot(u, v) {
     }
 
     var sum = 0.0;
-    for (var i = 0; i &lt; u.length; ++i) {
+    for (var i = 0; i < u.length; ++i) {
         sum += u[i] * v[i];
     }
 
@@ -692,7 +742,7 @@ function dot(u, v) {
 
 function negate(u) {
     result = [];
-    for (var i = 0; i &lt; u.length; ++i) {
+    for (var i = 0; i < u.length; ++i) {
         result.push(-u[i]);
     }
 
@@ -702,11 +752,11 @@ function negate(u) {
 //----------------------------------------------------------------------------
 
 function cross(u, v) {
-    if (!Array.isArray(u) || u.length &lt; 3) {
+    if (!Array.isArray(u) || u.length < 3) {
         throw "cross(): first argument is not a vector of at least 3";
     }
 
-    if (!Array.isArray(v) || v.length &lt; 3) {
+    if (!Array.isArray(v) || v.length < 3) {
         throw "cross(): second argument is not a vector of at least 3";
     }
 
@@ -738,7 +788,7 @@ function normalize(u, excludeLastComponent) {
         throw "normalize: vector " + u + " has zero length";
     }
 
-    for (var i = 0; i &lt; u.length; ++i) {
+    for (var i = 0; i < u.length; ++i) {
         u[i] /= len;
     }
 
@@ -761,7 +811,7 @@ function mix(u, v, s) {
     }
 
     var result = [];
-    for (var i = 0; i &lt; u.length; ++i) {
+    for (var i = 0; i < u.length; ++i) {
         result.push(s * u[i] + (1.0 - s) * v[i]);
     }
 
@@ -779,7 +829,7 @@ function scale(s, u) {
     }
 
     result = [];
-    for (var i = 0; i &lt; u.length; ++i) {
+    for (var i = 0; i < u.length; ++i) {
         result.push(s * u[i]);
     }
 
@@ -808,14 +858,14 @@ function flatten(v) {
 
     if (elemsAreArrays) {
         var idx = 0;
-        for (var i = 0; i &lt; v.length; ++i) {
-            for (var j = 0; j &lt; v[i].length; ++j) {
+        for (var i = 0; i < v.length; ++i) {
+            for (var j = 0; j < v[i].length; ++j) {
                 floats[idx++] = v[i][j];
             }
         }
     }
     else {
-        for (var i = 0; i &lt; v.length; ++i) {
+        for (var i = 0; i < v.length; ++i) {
             floats[i] = v[i];
         }
     }
@@ -833,8 +883,8 @@ var sizeof = {
     'mat3': new Float32Array(flatten(mat3())).byteLength,
     'mat4': new Float32Array(flatten(mat4())).byteLength
 };
-&lt;/script&gt;
-&lt;script&gt;
+</script>
+<script>
 /*
 * Copyright 2010, Google Inc.
 * All rights reserved.
@@ -904,12 +954,12 @@ WebGLUtils = function () {
         */
     var makeFailHTML = function (msg) {
         return '' +
-            '&lt;table style="background-color: #8CE; width: 100%; height: 100%;"&gt;&lt;tr&gt;' +
-            '&lt;td align="center"&gt;' +
-            '&lt;div style="display: table-cell; vertical-align: middle;"&gt;' +
-            '&lt;div style=""&gt;' + msg + '&lt;/div&gt;' +
-            '&lt;/div&gt;' +
-            '&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;';
+            '<table style="background-color: #8CE; width: 100%; height: 100%;"><tr>' +
+            '<td align="center">' +
+            '<div style="display: table-cell; vertical-align: middle;">' +
+            '<div style="">' + msg + '</div>' +
+            '</div>' +
+            '</td></tr></table>';
     };
 
     /**
@@ -917,20 +967,20 @@ WebGLUtils = function () {
         * type string
         */
     var GET_A_WEBGL_BROWSER = '' +
-        'This page requires a browser that supports WebGL.&lt;br/&gt;' +
-        '&lt;a href="http://get.webgl.org"&gt;Click here to upgrade your browser.&lt;/a&gt;';
+        'This page requires a browser that supports WebGL.<br/>' +
+        '<a href="http://get.webgl.org">Click here to upgrade your browser.</a>';
 
     /**
         * Mesasge for need better hardware
         * type string
         */
     var OTHER_PROBLEM = '' +
-        "It doesn't appear your computer can support WebGL.&lt;br/&gt;" +
-        '&lt;a href="http://get.webgl.org/troubleshooting/"&gt;Click here for more information.&lt;/a&gt;';
+        "It doesn't appear your computer can support WebGL.<br/>" +
+        '<a href="http://get.webgl.org/troubleshooting/">Click here for more information.</a>';
 
     /**
         * Creates a webgl context. If creation fails it will
-        * change the contents of the container of the &lt;canvas&gt;
+        * change the contents of the container of the <canvas>
         * tag to an error message with the correct links for WebGL.
         * param {Element} canvas. The canvas element to create a
         *     context from.
@@ -967,7 +1017,7 @@ WebGLUtils = function () {
     var create3DContext = function (canvas, opt_attribs) {
         var names = ["webgl", "experimental-webgl", "webkit-3d", "moz-webgl"];
         var context = null;
-        for (var ii = 0; ii &lt; names.length; ++ii) {
+        for (var ii = 0; ii < names.length; ++ii) {
             try {
                 context = canvas.getContext(names[ii], opt_attribs);
             } catch (e) { }
@@ -997,181 +1047,72 @@ window.requestAnimFrame = (function () {
             window.setTimeout(callback, 1000 / 60);
         };
 })();
-&lt;/script&gt;
-&lt;h2&gt;Originally Published: 2016-05-26&lt;/h2&gt;
-&lt;p&gt;For the &lt;a href="https://class.coursera.org/webgl-001"&gt;Interactive Graphics with WebGL&lt;/a&gt; course on Coursera, I
+</script>
+<h2>Originally Published: 2016-05-26</h2>
+<p>For the <a href="https://class.coursera.org/webgl-001">Interactive Graphics with WebGL</a> course on Coursera, I
 am making a tessellated triangle that can be twisted by a certain amount. This
-project, which is a work in progress, can be viewed here:&lt;/p&gt;
-&lt;div&gt;
-twist 0 &lt;input id="slider" type="range" min="0" max="100" step="10" value="50" /&gt;
+project, which is a work in progress, can be viewed here:</p>
+<div>
+twist 0 <input id="slider" type="range" min="0" max="100" step="10" value="50" />
  100
-&lt;/div&gt;
-&lt;canvas id="gl-canvas" width="512" height="512"&gt;
+</div>
+<canvas id="gl-canvas" width="512" height="512">
 Oops ... your browser doesn't support the HTML5 canvas element
-&lt;/canvas&gt;
+</canvas>
 
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>Music Recorder UWP</title>
-			<link>https://jtmaher2.github.io/blog/2021/07/2021-07-17-music-recorder-uwp</link>
-			<description>&lt;p&gt;There is now a UWP version of the Music Recorder app that is compatible with Windows 10 Spring 2020 update or later. It can be found at &lt;a href="https://github.com/JTMaher2/MusicRecorder/releases/tag/1.0.5"&gt;https://github.com/JTMaher2/MusicRecorder/releases/tag/1.0.5&lt;/a&gt;.&lt;/p&gt;</description>
-			<guid>https://jtmaher2.github.io/blog/2021/07/2021-07-17-music-recorder-uwp</guid>
-			<pubDate>Sat, 17 Jul 2021 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;There is now a UWP version of the Music Recorder app that is compatible with Windows 10 Spring 2020 update or later. It can be found at &lt;a href="https://github.com/JTMaher2/MusicRecorder/releases/tag/1.0.5"&gt;https://github.com/JTMaher2/MusicRecorder/releases/tag/1.0.5&lt;/a&gt;.&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>Statiq.Web</title>
-			<link>https://jtmaher2.github.io/blog/2020/12/2020-12-27-statiq-web</link>
-			<description>&lt;p&gt;I have transitioned my blog from Jekyll and Ruby to &lt;a href="https://statiq.dev/web/"&gt;Statiq.Web&lt;/a&gt; and C#.&lt;/p&gt;</description>
-			<guid>https://jtmaher2.github.io/blog/2020/12/2020-12-27-statiq-web</guid>
-			<pubDate>Sun, 27 Dec 2020 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;I have transitioned my blog from Jekyll and Ruby to &lt;a href="https://statiq.dev/web/"&gt;Statiq.Web&lt;/a&gt; and C#.&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>Music Recorder</title>
-			<link>https://jtmaher2.github.io/blog/2020/12/2020-12-27-music-recorder</link>
-			<description>&lt;p&gt;The Music Repertoire App is now called &amp;quot;Music Recorder,&amp;quot; and has been re-written using Xamarin and C#. It can be found &lt;a href="https://github.com/JTMaher2/MusicRecorder"&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
-			<guid>https://jtmaher2.github.io/blog/2020/12/2020-12-27-music-recorder</guid>
-			<pubDate>Sun, 27 Dec 2020 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;The Music Repertoire App is now called &amp;quot;Music Recorder,&amp;quot; and has been re-written using Xamarin and C#. It can be found &lt;a href="https://github.com/JTMaher2/MusicRecorder"&gt;here&lt;/a&gt;.&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>Music Repertoire App</title>
-			<link>https://jtmaher2.github.io/blog/2019/01/2019-01-01-music-repertoire-app</link>
-			<description>&lt;p&gt;I have made an app that allows users to record music pieces that they are working on, and to make remixes of these pieces. Its releases can be found &lt;a href="https://github.com/JTMaher2/MusicRepertoireAppReleases"&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
-			<guid>https://jtmaher2.github.io/blog/2019/01/2019-01-01-music-repertoire-app</guid>
-			<pubDate>Tue, 01 Jan 2019 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;I have made an app that allows users to record music pieces that they are working on, and to make remixes of these pieces. Its releases can be found &lt;a href="https://github.com/JTMaher2/MusicRepertoireAppReleases"&gt;here&lt;/a&gt;.&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>Passwordr Pwned Passwords API</title>
-			<link>https://jtmaher2.github.io/blog/2018/04/2018-04-14-passwordr-pwned-passwords-api</link>
-			<description>&lt;p&gt;Today, I am announcing integration of the &lt;a href="https://haveibeenpwned.com/API/v2"&gt;Pwned Passwords API&lt;/a&gt; with Passwordr (both Web and Android).
-You can now check any or all of your passwords with this API to see if they appear in any of the data breaches to which the Pwned Passwords API has access.&lt;/p&gt;</description>
-			<guid>https://jtmaher2.github.io/blog/2018/04/2018-04-14-passwordr-pwned-passwords-api</guid>
-			<pubDate>Sat, 14 Apr 2018 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;Today, I am announcing integration of the &lt;a href="https://haveibeenpwned.com/API/v2"&gt;Pwned Passwords API&lt;/a&gt; with Passwordr (both Web and Android).
-You can now check any or all of your passwords with this API to see if they appear in any of the data breaches to which the Pwned Passwords API has access.&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>Passwordr for Android</title>
-			<link>https://jtmaher2.github.io/blog/2018/04/2018-04-14-passwordr-android</link>
-			<description>&lt;p&gt;Today, I am announcing &lt;a href="https://github.com/JTMaher2/Passwordr-Android"&gt;Passwordr for Android&lt;/a&gt;, an Android app for managing passwords with a single master password.
-You can log into Passwordr for Android with your Google, Facebook, or Twitter account, along with a master password. This password does not have to be the same as your Google, Facebook, or Twitter password.&lt;/p&gt;</description>
-			<guid>https://jtmaher2.github.io/blog/2018/04/2018-04-14-passwordr-android</guid>
-			<pubDate>Sat, 14 Apr 2018 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;Today, I am announcing &lt;a href="https://github.com/JTMaher2/Passwordr-Android"&gt;Passwordr for Android&lt;/a&gt;, an Android app for managing passwords with a single master password.
-You can log into Passwordr for Android with your Google, Facebook, or Twitter account, along with a master password. This password does not have to be the same as your Google, Facebook, or Twitter password.&lt;/p&gt;
-&lt;p&gt;Passwordr for Android is open source. Its code can be found &lt;a href="https://github.com/JTMaher2/Passwordr-Android"&gt;here&lt;/a&gt;.
-Passwordr for Android uses the &lt;a href="https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html"&gt;javax.crypto library&lt;/a&gt; to securely encrypt all data. It stores everything in a &lt;a href="https://firebase.google.com/docs/firestore/"&gt;Cloud Firestore&lt;/a&gt; database.
-Passwordr for Android has been tested to work on devices 6.0 (Marshmallow) or later. If you have any feedback, feel free to open a new issue on Github.&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>Passwordr</title>
-			<link>https://jtmaher2.github.io/blog/2017/12/2017-12-27-passwordr</link>
-			<description>&lt;p&gt;Today, I am announcing &lt;a href="https://passwordr-3917b.firebaseapp.com/"&gt;Passwordr&lt;/a&gt;, a website for managing passwords with a single master password.
-You can log into Passwordr with your Google account. After you log in, you will be prompted for a master password. This password does not have to be the same as your Google password.&lt;/p&gt;</description>
-			<guid>https://jtmaher2.github.io/blog/2017/12/2017-12-27-passwordr</guid>
-			<pubDate>Wed, 27 Dec 2017 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;Today, I am announcing &lt;a href="https://passwordr-3917b.firebaseapp.com/"&gt;Passwordr&lt;/a&gt;, a website for managing passwords with a single master password.
-You can log into Passwordr with your Google account. After you log in, you will be prompted for a master password. This password does not have to be the same as your Google password.&lt;/p&gt;
-&lt;p&gt;Passwordr is open source. Its code can be found &lt;a href="https://github.com/jtmaher2/passwordr-site"&gt;here&lt;/a&gt;.
-Passwordr uses the &lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/"&gt;Web Cryptography API&lt;/a&gt; to securely encrypt all data. It stores everything in a &lt;a href="https://firebase.google.com/docs/firestore/"&gt;Cloud Firestore&lt;/a&gt; database.
-Passwordr has been tested to work in Chrome, Edge, and Firefox. If you have any feedback, feel free to open a new issue on Github.&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>How to install the Play Store in an API 25 emulator</title>
-			<link>https://jtmaher2.github.io/blog/2016/12/2016-12-28-android-emulator-play-store</link>
-			<description>&lt;p&gt;&lt;strong&gt;UPDATE 7-15-2018:&lt;/strong&gt;&lt;/p&gt;</description>
-			<guid>https://jtmaher2.github.io/blog/2016/12/2016-12-28-android-emulator-play-store</guid>
-			<pubDate>Wed, 28 Dec 2016 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;&lt;strong&gt;UPDATE 7-15-2018:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;As of Android Studio 3.0, this procedure is no longer necessary, as there are both Nexus 5 and Nexus 5X AVD images available with Google Play already installed.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;I recently was in a situation where I needed to test a Google Maps API app on a virtual device.
-When I launched the app, I got an error message about Google Play services needing to be
-installed in order for the app to be usable. This was strange, I thought, because I had
-intentionally downloaded the Google Play Services image instead of the plain one. However, it
-seems that, even if you download the Google Play Services image, you still need to have the
-Play Store installed in order to use the Maps API. Currently, the only Android emulator with
-official support for the Play Store is Genymotion, which is a paid product. Instead of this,
-I decided to try to manually install the Play Store from the OpenGapps &amp;quot;Pico&amp;quot;
-package (&lt;a href="http://opengapps.org/"&gt;http://opengapps.org/&lt;/a&gt;). This package contains a directory called &amp;quot;Core,&amp;quot; which contains a large number of
-.tar.lz archives. To extract these archives, you must use L-Zip (&lt;a href="http://www.nongnu.org/lzip/lzip.html"&gt;http://www.nongnu.org/lzip/lzip.html&lt;/a&gt;). However, doing this
-only extracts the .lz part. In order to extract the full archive, you must use another
-program that is capable of processing .tar files (e.g. &lt;a href="http://www.7-zip.org/"&gt;7-zip&lt;/a&gt;). The archives that you need
-to extract are: gmscore-X (where X is the type of image you are using),
-gsfcore-all, gsflogin-all, and vending-all. Before these archives can be pushed to the
-emulator, you must start the emulator in writable mode. To do this, open a command prompt
-to the Android\sdk\tools\ directory and type&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;emulator -avd YOUR_DEVICE_NAME -writable-system -selinux permissive&lt;/code&gt;&lt;/pre&gt;.
-&lt;p&gt;Once the emulator has been opened, start a new command prompt in the
-Android\sdk\platform-tools\ directory and type&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;adb root
-adb remount&lt;/code&gt;&lt;/pre&gt; in order to remount the filesystem in writable mode.
-&lt;p&gt;You now will be able to push the previously-extracted APKs:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;adb push PrebuiltGmsCore.apk /system/priv-app/PrebuiltGmsCore
-adb push GoogleServicesFramework.apk /system/priv-app/GoogleServicesFramework
-adb push GoogleLoginService.apk /system/priv-app/GoogleLoginService
-adb push Phonesky.apk /system/priv-app/Phonesky
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Next, you must make these APKs executable:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;adb shell
-chmod 777 /system/priv-app/PrebuiltGmsCore
-chmod 777 /system/priv-app/GoogleServicesFramework
-chmod 777 /system/priv-app/GoogleLoginService
-chmod 777 /system/priv-app/Phonesky
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Finally, restart the emulator:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;adb stop
-adb start
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If you encounter messages about Google Play Services not behaving properly (e.g. crashing), try deleting the current AVD and making a new one using the image that you just patched.&lt;/p&gt;
-&lt;p&gt;Now, you should see the Play Store icon on your dashboard.&lt;/p&gt;
-&lt;p&gt;I would like to thank the people who replied to these StackOverflow posts: &lt;a href="http://stackoverflow.com/questions/5095234/how-to-get-root-access-on-android-emulator"&gt;http://stackoverflow.com/questions/5095234/how-to-get-root-access-on-android-emulator&lt;/a&gt;, &lt;a href="http://stackoverflow.com/questions/34291902/android-studio-emulator-does-not-come-with-play-store-for-api-23"&gt;http://stackoverflow.com/questions/34291902/android-studio-emulator-does-not-come-with-play-store-for-api-23&lt;/a&gt;
-for helping me figure this out.&lt;/p&gt;
-&lt;p&gt;Comments? Did this not work? Send me a message at jtmaher2(at)gmail(dot)com, or follow me on Twitter.&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-		<item>
-			<title>Android Movie Info App</title>
-			<link>https://jtmaher2.github.io/blog/2016/07/2016-07-02-android-movie-info</link>
-			<description>&lt;p&gt;For the &lt;a href="https://www.udacity.com/course/developing-android-apps--ud853"&gt;Developing Android Apps&lt;/a&gt; course on Udacity, I
-have made an app that displays information about popular and top-rated
-movies. It gets this information in JSON format from &lt;a href="https://www.themoviedb.org/"&gt;The Movie DB&lt;/a&gt;. This
-app also shows details about specific movies, and allows the user to mark
-favorites. You can find the source code, and an APK, &lt;a href="https://github.com/JTMaher2/Movie-Info-App"&gt;on GitHub&lt;/a&gt;.&lt;/p&gt;</description>
-			<guid>https://jtmaher2.github.io/blog/2016/07/2016-07-02-android-movie-info</guid>
-			<pubDate>Sat, 02 Jul 2016 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;For the &lt;a href="https://www.udacity.com/course/developing-android-apps--ud853"&gt;Developing Android Apps&lt;/a&gt; course on Udacity, I
-have made an app that displays information about popular and top-rated
-movies. It gets this information in JSON format from &lt;a href="https://www.themoviedb.org/"&gt;The Movie DB&lt;/a&gt;. This
-app also shows details about specific movies, and allows the user to mark
-favorites. You can find the source code, and an APK, &lt;a href="https://github.com/JTMaher2/Movie-Info-App"&gt;on GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Here are some screenshots:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://jtmaher2.github.io/assets/img/movie-info-app-1.png" alt="popular movies"&gt;
-&lt;img src="https://jtmaher2.github.io/assets/img/movie-info-app-2.png" alt="top rated movies"&gt;
-&lt;img src="https://jtmaher2.github.io/assets/img/movie-info-app-3.png" alt="favorite movies"&gt;
-&lt;img src="https://jtmaher2.github.io/assets/img/movie-info-app-4.png" alt="movie details"&gt;
-&lt;img src="https://jtmaher2.github.io/assets/img/movie-info-app-5.png" alt="settings"&gt;&lt;/p&gt;
-</content:encoded>
-			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
-		</item>
-	</channel>
-</rss>
+
+                    </div>
+                    <div class="collapse" aria-hidden="true" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                        <meta itemprop="name">
+                    </div>
+                    <meta itemprop="dateModified">
+                </article>
+            </div>
+        </div>
+    </section>
+    <script id="dsq-count-scr" src="//jtmaher2-github-io.disqus.com/count.js" async></script>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+        var disqus_config = function () {
+        this.page.url = 'https://jtmaher2.github.io/blog/2022/03/2016-05-26-twisted-triangle';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '2016-05-26-twisted-triangle'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+    
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//jtmaher2-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+                                </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div>
+    <div class="card">
+    <div class="card-header"><span class="oi oi-folder"></span> Categories</div>
+    <div class="list-group list-group-flush">
+            <a href="/blog/categories/news" class="list-group-item list-group-item-action ">News</a>
+            <a href="/blog/categories/opinion" class="list-group-item list-group-item-action ">Opinion</a>
+    </div>
+</div>
+
+</div>
+                                    </div>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    <script>hljs.highlightAll();</script>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
