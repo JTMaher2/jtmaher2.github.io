@@ -4,9 +4,28 @@
 		<title>James T. Maher's Blog</title>
 		<link>http://jtmaher2.github.io/blog/</link>
 		<description />
-		<copyright>2022</copyright>
-		<pubDate>Mon, 20 Jun 2022 04:16:26 GMT</pubDate>
-		<lastBuildDate>Mon, 20 Jun 2022 04:16:26 GMT</lastBuildDate>
+		<copyright>2023</copyright>
+		<pubDate>Sun, 17 Dec 2023 04:49:54 GMT</pubDate>
+		<lastBuildDate>Sun, 17 Dec 2023 04:49:54 GMT</lastBuildDate>
+		<item>
+			<title>New DNN Password Manager Module</title>
+			<link>https://jtmaher2.github.io/blog/2023/12/2023-12-16-new-dnn-password-manager-plugin</link>
+			<description>&lt;p&gt;There is now a Stencil.js version of the DNN password manager module that uses cool new things like Typescript and Web Components. It can be found at &lt;a href="https://github.com/JTMaher2/JTM2_PasswordManager/releases/tag/alpha2"&gt;https://github.com/JTMaher2/JTM2_PasswordManager/releases/tag/alpha2&lt;/a&gt;.
+Known Issues:&lt;/p&gt;</description>
+			<guid>https://jtmaher2.github.io/blog/2023/12/2023-12-16-new-dnn-password-manager-plugin</guid>
+			<pubDate>Sat, 16 Dec 2023 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;There is now a Stencil.js version of the DNN password manager module that uses cool new things like Typescript and Web Components. It can be found at &lt;a href="https://github.com/JTMaher2/JTM2_PasswordManager/releases/tag/alpha2"&gt;https://github.com/JTMaher2/JTM2_PasswordManager/releases/tag/alpha2&lt;/a&gt;.
+Known Issues:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;There is some sort of race condition where, sometimes when you update or create a password, it will not get re-drawn on the page. Instead, you must
+manually refresh the page to see the updated version.&lt;/li&gt;
+&lt;li&gt;Sometimes, when you insert a new item in an empty grid, it will say &amp;quot;Showing 0 of 1 items.&amp;quot;&lt;/li&gt;
+&lt;li&gt;When you load the module, it will let you continue to the index view, even if an invalid master password was provided.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Please let me know what you think about this module, and how it can be improved.&lt;/p&gt;
+</content:encoded>
+			<comments xmlns="http://purl.org/rss/1.0/modules/slash/">0</comments>
+		</item>
 		<item>
 			<title>2016 05 26 Twisted Triangle</title>
 			<link>https://jtmaher2.github.io/blog/2022/03/2016-05-26-twisted-triangle</link>
