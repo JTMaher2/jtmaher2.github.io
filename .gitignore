@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/bin/x64/Release/net6.0-windows
+/cache
+/obj
+/StatiqBlog.csproj.user
