@@ -5,16 +5,16 @@
 		<link>http://jtmaher2.github.io/blog/</link>
 		<description />
 		<copyright>2024</copyright>
-		<pubDate>Fri, 20 Sep 2024 23:25:52 GMT</pubDate>
-		<lastBuildDate>Fri, 20 Sep 2024 23:25:52 GMT</lastBuildDate>
+		<pubDate>Thu, 07 Nov 2024 02:32:59 GMT</pubDate>
+		<lastBuildDate>Thu, 07 Nov 2024 02:32:59 GMT</lastBuildDate>
 		<item>
 			<title>2016 05 26 Twisted Triangle</title>
-			<link>https://jtmaher2.github.io/blog/2024/09/2016-05-26-twisted-triangle</link>
+			<link>https://jtmaher2.github.io/blog/2024/11/2016-05-26-twisted-triangle</link>
 			<description>&lt;p&gt;For the &lt;a href="https://class.coursera.org/webgl-001"&gt;Interactive Graphics with WebGL&lt;/a&gt; course on Coursera, I
 am making a tessellated triangle that can be twisted by a certain amount. This
 project, which is a work in progress, can be viewed here:&lt;/p&gt;</description>
-			<guid>https://jtmaher2.github.io/blog/2024/09/2016-05-26-twisted-triangle</guid>
-			<pubDate>Fri, 20 Sep 2024 18:08:53 GMT</pubDate>
+			<guid>https://jtmaher2.github.io/blog/2024/11/2016-05-26-twisted-triangle</guid>
+			<pubDate>Wed, 06 Nov 2024 20:20:52 GMT</pubDate>
 			<content:encoded>&lt;script id="vertex-shader" type="x-shader/x-vertex"&gt;
 attribute vec4 vPosition;
 
